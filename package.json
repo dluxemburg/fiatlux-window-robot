@@ -1,0 +1,29 @@
+{
+  "name": "fiatlux",
+  "description": "let there be light",
+  "version": "0.1.0",
+  "author": {
+    "name": "Daniel Luxemburg",
+    "email": "daniel.luxemburg@gmail.com"
+  },
+  "main": "app.js",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies":{
+    "express": "latest",
+    "duino": "latest",
+    "ejs": "latest"
+  },
+  "devDependencies": {
+      "mocha": "latest",
+      "grunt": "latest",
+      "grunt-exec": "latest",
+      "grunt-mocha-test": "latest",
+      "uglify-js": "latest"
+  },
+  "keywords": []
+}
