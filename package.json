@@ -16,7 +16,8 @@
   "dependencies":{
     "express": "latest",
     "duino": "latest",
-    "ejs": "latest"
+    "colors": "latest",
+    "serialport": "latest"
   },
   "devDependencies": {
       "mocha": "latest",

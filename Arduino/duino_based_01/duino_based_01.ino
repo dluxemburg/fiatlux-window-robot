@@ -22,7 +22,7 @@ Servo servo1;
 
 void setup() {
   Serial.begin(115200);
-  servo1.attach(9);
+//  servo1.attach(9);
 }
 
 void loop() {
@@ -84,27 +84,27 @@ void process() {
 }
 
 void servo1On() {
+  servo1.attach(9);
   int pos = servo1.read();
   Serial.println("Servo 1 On");
-  servo1.write(180);
-//  for(pos; pos < 180; pos += 1)  // goes from 0 degrees to 180 degrees 
-//  {                                  // in steps of 1 degree 
-//    servo1.write(pos);              // tell servo to go to position in variable 'pos' 
-//    delay(15);                       // waits 15ms for the servo to reach the position 
-//  } 
+//  servo1.write(180);
+  for(pos; pos < 180; pos += 1)  // goes from 0 degrees to 180 degrees 
+  {                                  // in steps of 1 degree 
+    servo1.write(pos);              // tell servo to go to position in variable 'pos' 
+    delay(5);                       // waits 15ms for the servo to reach the position 
+  }
+ servo1.detach();
 }
 
 void servo1Off() {
+  servo1.attach(9);
   int pos = servo1.read();
-  Serial.println("Servo 1 Off - to 0 (stepping):");
-  while(pos>=90 ){
-    Serial.println(pos);
-    servo1.write(pos - 1);
-    delay(10);
-    pos = servo1.read();
+  for(pos; pos > 0; pos -= 1)  // goes from 0 degrees to 180 degrees 
+  {                                  // in steps of 1 degree 
+    servo1.write(pos);              // tell servo to go to position in variable 'pos' 
+    delay(5);                       // waits 15ms for the servo to reach the position 
   }
-  Serial.println("Servo 1 at 90");
-  servo1.write(90);
+  servo1.detach();
 }
 
 void servo1Stop() {

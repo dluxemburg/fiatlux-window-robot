@@ -1,3 +1,6 @@
 var fiatlux = require('./lib/fiatlux')
 
-fiatlux.listen(8080)
+fiatlux.clock.start(function(){
+	fiatlux.listen(8080)	
+})
+
