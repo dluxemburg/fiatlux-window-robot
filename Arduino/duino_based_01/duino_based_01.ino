@@ -86,24 +86,34 @@ void process() {
 void servo1On() {
   servo1.attach(9);
   int pos = servo1.read();
-  Serial.println("Servo 1 On");
-//  servo1.write(180);
-  for(pos; pos < 180; pos += 1)  // goes from 0 degrees to 180 degrees 
+  Serial.println("Servo 1 going from:");
+  Serial.println(pos);
+  Serial.println("To:");
+  Serial.println(180);
+  for(pos; pos <= 180; pos += 1)  // goes from 0 degrees to 180 degrees 
   {                                  // in steps of 1 degree 
     servo1.write(pos);              // tell servo to go to position in variable 'pos' 
     delay(5);                       // waits 15ms for the servo to reach the position 
   }
+  delay(15);
+  servo1.write(180);
  servo1.detach();
 }
 
 void servo1Off() {
   servo1.attach(9);
   int pos = servo1.read();
-  for(pos; pos > 0; pos -= 1)  // goes from 0 degrees to 180 degrees 
+  Serial.println("Servo 1 going from:");
+  Serial.println(pos);
+  Serial.println("To:");
+  Serial.println(0);
+  for(pos; pos >= 0; pos -= 1)  // goes from 0 degrees to 180 degrees 
   {                                  // in steps of 1 degree 
     servo1.write(pos);              // tell servo to go to position in variable 'pos' 
     delay(5);                       // waits 15ms for the servo to reach the position 
   }
+  delay(15);
+  servo1.write(0);
   servo1.detach();
 }
 
