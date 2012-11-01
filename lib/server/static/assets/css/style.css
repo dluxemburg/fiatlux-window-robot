@@ -4,9 +4,11 @@ body {
 padding-top: 60px;
 padding-bottom: 40px;
 }
-.span4 .btn {
+.span6 .btn {
 width: auto;
 display: block;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 
 h6 {
@@ -53,7 +55,7 @@ h6 {
     top: -6px;
 }
 .bootstrap-timepicker.modal {
-    margin-left: -100px;
+/*    margin-left: -100px;*/
     margin-top: 0;
     top: 30%;
     width: 200px;
