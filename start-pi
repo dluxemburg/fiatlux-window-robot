@@ -1,1 +1,1 @@
-forever start -l forever.log -o out.log -e err.log pi.js
+forever start -a -l forever.log -o out.log -e err.log pi.js
